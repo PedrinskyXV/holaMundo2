@@ -8,18 +8,13 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
-     * usar php artisan make:migration create_products_table
+     *
      * @return void
      */
     public function up()
     {
-        Schema::create('products', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('description');
-            $table->integer('stock');
-            //new 
-            $table->integer('maxStock');
             $table->timestamps();
         });
     }
@@ -31,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('categories');
     }
 };
