@@ -12,7 +12,7 @@ class ProductController extends Controller
         $categories = ['Almacenamiento', 'Monitores', 'Accesorios'];
 
         //return view('products/index')->with('products', $products)->with('categories', $categories);
-        return view('products/index', compact('products', 'categories'));
+        return view('products.index', compact('products', 'categories'));
         //return view('products/index', $products);
     }
 }

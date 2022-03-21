@@ -17,9 +17,13 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('description');
+            $table->double('unit_price');
             $table->integer('stock');
             //new 
             $table->integer('maxStock');
+            //FK
+            $table->foreignId('categories_id')->references('id')->on('categories');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
