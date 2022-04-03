@@ -10,7 +10,7 @@
 
 <div class="text-center mb-5">
     <h1>Crear</h1>
-    <h2>Producto</h2>
+    <h2>Categoria</h2>
 </div>
 
 <div class="col-md-10 mx-auto bg-white p-3">
@@ -18,12 +18,12 @@
         <div class="col-md-8">
             <form action="{{ route('categories.store') }}" method="post" novalidate>
                 @csrf
-                <h2 class="mb-3 text-uppercase">Informacion del Producto:</h2>
+                <h2 class="mb-3 text-uppercase">Informacion de la categoria:</h2>
                 <div class="row mb-3">
-                    <label for="name">Nombre del Producto</label>
+                    <label for="name">Nombre de la Categoria</label>
 
                     <div class="col-md-6 mb-3">
-                        <input type="text" name="name" id="name" class="form-control @error('name') is-invalid @enderror" placeholder="Nombre de la Producto" value="{{ old('name')}}">
+                        <input type="text" name="name" id="name" class="form-control @error('name') is-invalid @enderror" placeholder="Nombre de la categoria" value="{{ old('name')}}">
                     </div>
 
                     @error('name')
@@ -33,7 +33,7 @@
                     @enderror
 
                     <div class="form-group">
-                        <input type="submit" value="Agregar Producto" class="btn btn-outline-primary">
+                        <input type="submit" value="Agregar Categoria" class="btn btn-outline-primary">
                     </div>
                 </div>
             </form>

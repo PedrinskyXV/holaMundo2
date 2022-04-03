@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CategoryController extends Controller
 {
@@ -24,7 +25,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('categories.create');
     }
 
     /**
@@ -35,7 +36,15 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request->all());
+
+        $data = request()->validate([
+            'name' => 'required|min:1|max:50'
+        ]);
+
+        DB::table('categories')->insert(['id' => 12,'name' => $data['name'], 'created_at' => now()]);
+    
+        return view('categories.index');
     }
 
     /**

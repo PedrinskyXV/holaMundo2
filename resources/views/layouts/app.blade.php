@@ -76,6 +76,11 @@
         </nav>
 
         <main class="py-4">
+            <div class="row">
+                <div class="py-4 mt-5 col-12">
+                    @yield('buttons')
+                </div>
+            </div>
             @yield('content')
         </main>
     </div>

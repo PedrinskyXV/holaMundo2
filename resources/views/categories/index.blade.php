@@ -1,8 +1,15 @@
 @extends('layouts.app')
 
+
+@section('buttons')
+    <a class="btn btn-primary mr-2" href="{{ route('categories.create') }}">Crear Categorias</a>
+@endsection
+
+
 @section('content')
 <h1>Categorias</h1>
 <h2 class="text-center mb-5">Administracion de categorias</h2>
+
 <div class="col-md-10 mx-auto bg-white p-3">
     <table class="table">
         <thead class="bg-primary text-light">
